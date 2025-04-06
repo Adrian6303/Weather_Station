@@ -1,0 +1,6 @@
+Project Members:
+Schiopu Adrian 237
+Tcaciuc Andrea Elena 237
+
+Project Idea:
+Weather Station (using Arduino ESP8266 + DHT11 sensor)

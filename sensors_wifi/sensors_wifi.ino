@@ -6,8 +6,9 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 
-const char* ssid = "SANKI S.R.L";
-const char* password = "FjGyHY7CZ3";
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
+
 ESP8266WebServer server(80); // Portul serverului web
 
 // Definire pin senzor DHT11

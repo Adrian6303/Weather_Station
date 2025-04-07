@@ -100,3 +100,7 @@ MQ-135 raw value (CO2 levels)
 ![Video](video.mp4)
 
 Once powered, the OLED will show real-time data, and the web interface will update every 2 seconds.
+
+## 🤝 Team Members
+- Schiopu Adrian
+- Tcaciuc Andrea Elena

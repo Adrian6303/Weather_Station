@@ -40,7 +40,7 @@ This project creates a portable weather station that monitors temperature, humid
 ![Weather Station Schematic](weatherStation2_bb.jpg)
 
 ## 📝 Source Code
-[See source code](https://github.com/Adrian6303/Weather_Station/blob/main/sensors_wifi/sensors_wifi.ino)
+[See source code](https://github.com/at-cs-ubbcluj-ro/team-project-at_schiopuadrian_tcaciucandrea/blob/main/sensors_wifi/sensors_wifi.ino)
 
 ## 🛠️ Setup Instructions
 

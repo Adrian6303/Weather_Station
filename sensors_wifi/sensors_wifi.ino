@@ -6,8 +6,8 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 
-const char* ssid = "YOUR_WIFI_SSID";
-const char* password = "YOUR_WIFI_PASSWORD";
+const char* ssid = "YOUR_WIFI_SSID";  //exemplu
+const char* password = "YOUR_WIFI_PASSWORD"; 
 
 ESP8266WebServer server(80); // Portul serverului web
 
@@ -73,18 +73,20 @@ void setup() {
   display.display();
 
   // Configurare server web
-  server.on("/", []() {
+  server.on("/data", []() {
     float humidity = dht.readHumidity();
     float temperature = dht.readTemperature();
     int sensorValue = analogRead(MQ135_PIN);
 
-    String html = "<html><body><h2>Statie Meteo</h2>";
-    html += "<p>Temperatura: " + String(temperature) + " &deg;C</p>";
-    html += "<p>Umiditate: " + String(humidity) + " %</p>";
-    html += "<p>MQ-135 (valoare bruta): " + String(sensorValue) + "</p>";
-    html += "</body></html>";
 
-    server.send(200, "text/html", html);
+    String json = "{";
+    json += "\"temperature\":" + String(temperature, 2) + ",";
+    json += "\"humidity\":" + String(humidity, 2) + ",";
+    json += "\"mq135\":" + String(sensorValue);
+    json += "}";
+
+    server.sendHeader("Access-Control-Allow-Origin", "*");
+    server.send(200, "application/json", json);
   });
 
   // Pornire server web
